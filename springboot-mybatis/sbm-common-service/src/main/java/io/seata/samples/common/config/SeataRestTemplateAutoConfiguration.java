@@ -46,6 +46,7 @@ public class SeataRestTemplateAutoConfiguration {
 
     @PostConstruct
     public void init() {
+        // 池化template 并遍历池中的template，为每个template 添加自定义拦截
         if (this.restTemplates != null) {
             Iterator var1 = this.restTemplates.iterator();
 
